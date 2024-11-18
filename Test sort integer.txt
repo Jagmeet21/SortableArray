@@ -1,0 +1,31 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class SortableArrayTest {
+
+    @Test
+    public void testSortIntegers() {
+        int[] input = {5, 3, 8, 1, 2};
+        int[] expected = {1, 2, 3, 5, 8};
+        assertArrayEquals(expected, SortableArray.sortIntegers(input));
+    }
+
+    @Test
+    public void testSortEmptyArray() {
+        int[] input = {};
+        int[] expected = {};
+        assertArrayEquals(expected, SortableArray.sortIntegers(input));
+    }
+
+    @Test
+    public void testSortSingleElementArray() {
+        int[] input = {42};
+        int[] expected = {42};
+        assertArrayEquals(expected, SortableArray.sortIntegers(input));
+    }
+
+    @Test
+    public void testSortNullArray() {
+        assertThrows(IllegalArgumentException.class, () -> SortableArray.sortIntegers(null));
+    }
+}
