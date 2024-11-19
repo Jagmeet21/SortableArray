@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class SortableArray {
     // Method to sort an array of integers
     public static int[] sortIntegers(int[] array) {
@@ -15,7 +16,7 @@ public class SortableArray {
         int[] numbers = {5, 2, 9, 1, 3};
         System.out.println("Sorted Integers: " + Arrays.toString(sortIntegers(numbers)));
 
-        String[] words = {"cat", "fox", "dog", "Bear"};
+        String[] words = {"cat", "fox", "dog", "bear"};
         System.out.println("Sorted Strings: " + Arrays.toString(sortStrings(words)));
     }
 }
